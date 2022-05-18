@@ -1,0 +1,48 @@
+input[type="file"] {
+    display: none;
+}
+
+body{
+    background-color: #071e26;
+}
+
+.custom-file-upload {
+    border: 1px solid #0d6efd;
+    background-color: #11ece5;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-family: 'Oswald', sans-serif;
+}
+
+.btn-primary{
+    background-color: #11ece5;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+.titulo{
+    font-family: 'Koulen', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: wheat;
+}
+
+.subTitle{
+    font-family: 'Koulen', cursive;
+    text-align: center;
+    color: wheat;
+}
+
+.trans{
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .cerrar{
+    margin-right: 5px;
+  }

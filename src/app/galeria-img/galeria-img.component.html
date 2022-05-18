@@ -1,0 +1,24 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <header>
+        <h1 class="titulo" >Galeria de imagenes</h1>
+      </header>
+      
+    <button type="button" routerLink="/" class="btn btn-primary">Regresar al IDE</button>
+<div id="graph" ></div>
+<button type="button" (click)="agregarGraficos()"  class="btn btn-primary" >Ver graficos</button>
+<div style="text-align:center;" *ngFor="let hero of listaGraficos;let indice=index"   >
+    <div id="graph{{indice+1}}" ></div>
+    
+    <button *ngIf="mostrarB" class="btn btn-info" (click)="descargar(indice+1)" >Descarga </button>
+</div>
+
+</body>
+

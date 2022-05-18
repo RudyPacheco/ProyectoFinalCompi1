@@ -1,0 +1,73 @@
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1 class="titulo" >IDE WEB</h1>
+  </header>
+  
+  <div class="trans"> 
+    <button type="button" (click)="nuevoArchivo()" class="btn btn-primary">Nuevo</button>
+    <label class="custom-file-upload"> <input type="file" (change)="fileUploadInAngular($event)"/> Cargar </label>
+    <button type="button" (click)="guardarArchivo()" class="btn btn-primary">Guardar</button>
+    <button type="button" (click)="ejecutarCodigo()" class="btn btn-primary">Ejecutar</button>
+    <button type="button" routerLink="/imagenes" class="btn btn-primary">Ver graficos</button>
+    
+  </div>
+
+  <div class="btn-group" role="group" aria-label="Basic example">
+    <div *ngFor="let archivo of archivos let i= index">
+      <button type="button" (click)="cambiarPestania(i)" class="btn btn-success">{{archivo.name}}</button>
+      <button class="cerrar btn btn-success" (click)="cerrarPestania(i)" >X</button>
+    </div>
+  </div>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="ngx-codemirror mb-2">
+        <ngx-codemirror #code2 id="asd"
+        [(ngModel)]="texto"
+        [options]="{
+          lineNumbers: true,
+          theme: 'material',
+          mode: 'text/javascript'
+        }"
+        (ngModelChange)="setEditorContent($event)"
+        ></ngx-codemirror>
+        
+        
+      </div>
+      </div>
+
+
+      <h1 class="subTitle"> Consola Salida</h1>
+
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="ngx-codemirror mb-2">
+          <ngx-codemirror #code1 id="xd"
+          [(ngModel)]="textoSalida"
+          [options]="{
+            lineNumbers: true,
+            theme: 'material',
+            mode: 'markdown'
+          }"
+
+          ></ngx-codemirror>
+          
+          
+        </div>
+        </div>
+        <div  style="text-align:center;">
+            <div id="graph" ></div>
+            <div id="graph2" ></div>
+        </div>
+        <div style="text-align:center;">
+       
+      </div>
+      
+
+  </body>
+  

@@ -1,0 +1,10 @@
+body{
+    background-color: #071e26;
+}
+
+.titulo{
+    font-family: 'Koulen', cursive;
+    font-size: 3rem;
+    text-align: center;
+    color: wheat;
+}

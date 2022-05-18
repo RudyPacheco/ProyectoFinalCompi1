@@ -1,0 +1,5 @@
+@import '~codemirror/lib/codemirror';
+@import '~codemirror/theme/material';
+.CodeMirror{
+    height: auto;
+ }
